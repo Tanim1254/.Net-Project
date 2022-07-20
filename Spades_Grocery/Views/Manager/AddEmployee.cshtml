@@ -1,0 +1,28 @@
+﻿@model SpadesGroceryShop.Models.Employee
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+<form action="" method="post">
+
+    <h3>Employee Name: </h3> <input type="text" name="Emp_Name" value="@(Model !=null ? Model.Emp_Name: "")" />
+    @Html.ValidationMessage("Emp_Name", new { @class = "text-danger" })<br />
+
+    <h3>Employee Nid: </h3> <input type="text" name="Emp_Nid" value="@(Model !=null ? Model.Emp_Nid: "")" />
+    @Html.ValidationMessage("Emp_Nid", new { @class = "text-danger" })<br />
+
+    <h3> Employee Phone: </h3> <input type="text" name="Emp_Phone" value="@(Model !=null ? Model.Emp_Phone: "")" />
+    @Html.ValidationMessage("Emp_Phone", new { @class = "text-danger" })<br />
+
+    <h3>Employee Email: </h3><input type="email" name="Emp_Email" value="@(Model !=null ? Model.Emp_Email: "")" />
+    @Html.ValidationMessage("Emp_Email", new { @class = "text-danger" })<br />
+
+    <h3>Employee Salary: </h3> <input type="text" name="Emp_Salary" value="@(Model !=null ? Model.Emp_Salary: "")" />
+    @Html.ValidationMessage("Emp_Salary", new { @class = "text-danger" })<br />
+
+    <br />
+    <input type="submit" name="submit" class="btn btn-success" />
+</form>
+

@@ -1,0 +1,35 @@
+﻿@model SpadesGroceryShop.Models.Customer
+@{
+    ViewBag.Title = "EditCustomer";
+}
+
+
+<h2>EditCustomer</h2>
+<form action="../UpdateCustomer" method="post">
+    <table>
+        <tr>
+            <td>Customer Id: </td>
+            <td><input type="text" name="Customer_Id" value="@Model.Customer_Id" disabled class=" bg-primary" /></td>
+        </tr>
+        <tr>
+            <td>Customer Name: </td>
+            <td><input type="text" name="Name" value="@Model.Name" /></td>
+        </tr>
+        <tr>
+            <td>Customer Email:</td>
+            <td><input type="Email" name="Email" value="@Model.Email" /></td>
+        </tr>
+        <tr>
+            <td>Customer Phone: </td>
+            <td><input type="text" name="Phone" value="@Model.Phone" /></td>
+        </tr>
+        <tr>
+            <td>Customer Address: </td>
+            <td><input type="text" name="Address" value="@Model.Address" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Save Changes" class="btn btn-success" /></td>
+        </tr>
+    </table>
+</form>
+

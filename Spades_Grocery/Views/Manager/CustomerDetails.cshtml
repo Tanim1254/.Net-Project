@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Customer Details</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th class="alert-success">
+            Id:
+        </th>
+        <th class="alert-success">
+            Name:
+        </th>
+        <th class="alert-success">
+            Email:
+        </th>
+        <th class="alert-success">
+            Phone:
+        </th>
+        <th class="alert-success">
+            Address:
+        </th>
+    </tr>
+    
+
+    @foreach (var p in Model)
+     {
+        <tr>
+            <td>@p.Customer_Id</td>
+            <td>@p.Name</td>
+            <td>@p.Email</td>
+            <td>@p.Phone</td>
+            <td>@p.Address</td>
+        </tr>
+
+     }
+</table>
+<a>@Html.ActionLink("Print", "PrintALL1")</a>
+

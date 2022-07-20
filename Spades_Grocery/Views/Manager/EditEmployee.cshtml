@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "EditCustomer";
+}
+
+<h2>EditCustomer</h2>
+<form action="../EditEmployee" method="post">
+    <table>
+        <tr>
+            <td>Employee Id: </td>
+            <td><input type="text" name="Emp_Id" value="@Model.Emp_Id" disabled class=" bg-primary" /></td>
+        </tr>
+        <tr>
+            <td>Employee Name: </td>
+            <td><input type="text" name="Emp_Name" value="@Model.Emp_Name" /></td>
+        </tr>
+        <tr>
+            <td>Employee Email:</td>
+            <td><input type="Email" name="Emp_Email" value="@Model.Emp_Email" /></td>
+        </tr>
+        <tr>
+            <td>Employee Phone: </td>
+            <td><input type="text" name="Emp_Phone" value="@Model.Emp_Phone" /></td>
+        </tr>
+        <tr>
+            <td>Employee Nid: </td>
+            <td><input type="text" name="Emp_Nid" value="@Model.Emp_Nid" /></td>
+        </tr>
+        <tr>
+            <td>Employee Salary: </td>
+            <td><input type="text" name="Emp_Nid" value="@Model.Emp_Salary" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Save Changes" class="btn btn-success" /></td>
+        </tr>
+    </table>
+</form>
+

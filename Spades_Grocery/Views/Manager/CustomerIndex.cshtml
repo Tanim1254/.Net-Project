@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<table class="table table-condensed">
+    <tr>
+        <th>
+            Id:
+        </th>
+        <th>
+            Name:
+        </th>
+        <th>
+            Email:
+        </th>
+        <th>
+            Phone:
+        </th>
+        <th>
+            Address:
+        </th>
+        <th>
+
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    <h3>Wants To Add Customer?</h3>
+    <a href="@Url.Action("AddCustomer", "Manager") " class="btn btn-success">Add</a>
+    <a href="@Url.Action("CustomerDetails","Manager")" class="btn btn-primary">Details</a>
+
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Customer_Id</td>
+            <td>@p.Name</td>
+            <td>@p.Email</td>
+            <td>@p.Phone</td>
+            <td>@p.Address</td>
+
+
+            <td><a href="@Url.Action("EditCustomer", "Manager" , new { id = p.Customer_Id }) " class="btn btn-success">Edit</a></td>
+            <td><a href="@Url.Action("DeleteCustomer","Manager", new { id = p.Customer_Id })"class="btn btn-danger">Remove</a></td>
+            
+        </tr>
+
+    }
+</table>
+
